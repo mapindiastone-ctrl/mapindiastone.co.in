@@ -257,6 +257,44 @@
             color: #6b7280;
         }
 
+        /* --- Gallery Section --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-card {
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-card .caption {
+            padding: 1rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            text-align: center;
+            background-color: #ffffff;
+        }
+
         /* --- Contact & Quote Form --- */
         .contact-container {
             display: grid;
@@ -372,6 +410,7 @@
                 <ul>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#products">Specifications</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -458,6 +497,35 @@
                         <li><span class="label">Inspection:</span> Direct Quarry Inspection</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="section-title">
+            <h2>Product Showcase & Quarry Media</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="github-social-preview.jpg" alt="Stone Block Structural Diagram">
+                <div class="caption">Structural Block Layers Diagram</div>
+            </div>
+            <div class="gallery-card">
+                <img src="github-social-preview (1).jpg" alt="Textured Stone Monolith">
+                <div class="caption">Monolith Surface Detail</div>
+            </div>
+            <div class="gallery-card">
+                <img src="github-social-preview (2).jpg" alt="Grooved Stone Surface">
+                <div class="caption">Grooved Granite Texture</div>
+            </div>
+            <div class="gallery-card">
+                <img src="github-social-preview (3).jpg" alt="Quarry Block Inspection">
+                <div class="caption">Quarry Site Inspection View</div>
+            </div>
+            <div class="gallery-card">
+                <img src="github-social-preview (4).jpg" alt="Large Cut Quarry Block">
+                <div class="caption">Raw Cut Quarry Block</div>
             </div>
         </div>
     </section>
